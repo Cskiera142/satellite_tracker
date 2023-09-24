@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = response.data;
 
       const orbitStatusEl = document.getElementById("orbit-status");
-      orbitStatusEl.textContent = "Altitude is A-OK!";
+      orbitStatusEl.textContent = "Altitude is A-OK";
 
-      if (data.message === "Altitude is A-OK!") {
+      if (data.message === "Altitude is A-OK") {
         orbitStatusEl.classList.add("health-ok");
-      } else if (data.message === "WARNING: RAPID ORBITAL DECAY IMMINENT!!") {
+      } else if (data.message === "WARNING: RAPID ORBITAL DECAY IMMINENT") {
         orbitStatusEl.classList.add("health-warning");
       } else if (data.message === "Sustained Low Earth Orbit Resumed") {
         orbitStatusEl.classList.add("health-sustained");

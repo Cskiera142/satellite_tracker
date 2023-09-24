@@ -2,21 +2,34 @@
 
 :root {
   font-family: "Orbitron";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  width: 100%;
+  position: relative;
+  width: 100vw;
   color: #eee;
   background-color: #282f49;
+  overflow: hidden;
+  background: rgb(40, 47, 73);
+  background: linear-gradient(
+    0deg,
+    rgba(40, 47, 73, 1) 0%,
+    rgba(47, 56, 80, 1) 30%,
+    rgba(126, 161, 158, 1) 50%,
+    rgba(50, 60, 83, 1) 70%,
+    rgba(40, 47, 73, 1) 100%
+  );
 }
 
 h1 {
   padding: 2rem;
-  margin-top: 10rem;
+  margin-top: 8rem;
   border: 2px solid #eee;
 }
 
@@ -25,8 +38,19 @@ h1 {
   margin: 1rem;
 }
 
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #orbit-status {
   border: 1px solid #eee;
+  padding: 1rem;
+  font-size: 24px;
+  background-color: #aaa;
+  font-weight: bold;
 }
 
 .health-ok {
@@ -37,4 +61,71 @@ h1 {
 }
 .health-warning {
   color: red;
+}
+
+.planet-container {
+  height: 31.25rem;
+  width: 31.25rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 20%;
+  top: 50%;
+}
+
+.planet {
+  height: 15.62rem;
+  width: 15.62rem;
+  background: rgb(40, 47, 73);
+  background: radial-gradient(
+    circle,
+    rgba(40, 47, 73, 1) 0%,
+    rgba(68, 130, 125, 1) 0%,
+    rgba(38, 60, 143, 1) 100%
+  );
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.planet:before {
+  content: "";
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #00d67d;
+  top: 6rem;
+  left: 3rem;
+  border-radius: 50%;
+  box-shadow: 2em 5em 0 0.6em #00d67d, 2em -2em 0 1em #00d652;
+}
+
+.satellite {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  left: 5rem;
+  bottom: -20rem;
+  animation: spin 3s infinite;
+  z-index: 1;
+}
+
+@keyframes spin {
+  49% {
+    z-index: 1;
+  }
+  50% {
+    bottom: -9.3em;
+    left: 23em;
+    z-index: -1;
+  }
+  100% {
+    z-index: -1;
+  }
 }

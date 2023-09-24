@@ -10,22 +10,26 @@
   <body>
     <h1>Satellite Altitude Statistics</h1>
     <div class="stats">
-      -- <strong>Minimum Altitude:</strong> <span id="minAltitude"></span> km --
+      |-- <strong>Minimum Altitude:</strong> <span id="minAltitude"></span> km
+      --|
     </div>
     <div class="stats">
-      -- <strong>Maximum Altitude:</strong> <span id="maxAltitude"></span> km --
+      |-- <strong>Maximum Altitude:</strong> <span id="maxAltitude"></span> km
+      --|
     </div>
     <div class="stats">
-      -- <strong>Average Altitude:</strong>
-      <span id="averageAltitude"></span> km --
+      |-- <strong>Average Altitude:</strong>
+      <span id="averageAltitude"></span> km --|
     </div>
-    <div>
-      -- <strong>STATUS</strong> --
-      <div>
-        <div id="orbit-status"></div>
-      </div>
+    <div class="status">
+      <h1>-- STATUS --</h1>
+      <span id="orbit-status"></span>
     </div>
-
+    <div class="planet-container">
+      <div class="satellite"></div>
+      <div class="orbit"></div>
+      <div class="planet"></div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
   </body>
