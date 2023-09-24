@@ -19,11 +19,11 @@ body {
   background: rgb(40, 47, 73);
   background: linear-gradient(
     0deg,
-    rgba(40, 47, 73, 1) 0%,
-    rgba(47, 56, 80, 1) 30%,
+    rgb(0, 0, 0) 0%,
+    rgb(21, 31, 32) 30%,
     rgba(126, 161, 158, 1) 50%,
-    rgba(50, 60, 83, 1) 70%,
-    rgba(40, 47, 73, 1) 100%
+    rgb(21, 31, 32) 70%,
+    rgb(0, 0, 0) 100%
   );
 }
 
