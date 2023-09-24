@@ -1,0 +1,41 @@
+---- Satellite tracker ----
+
+Uses the https://api.cfast.dev/satellite API to track the altitude of the CarsFast satellite.
+
+## Table of Contents
+
+- [Project Description](#project-description)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+## Project Description
+
+Satellite tracker uses the https://api.cfast.dev/satellite API to track the health and altitude of the CarsFast satellite. It updates every 10 seconds and displays the information in real time to access the overall positioning of the satellite and gives a status update depending on the altitude and how safely the satellite is keeping its relative height to maintain its orbit.
+
+## Features
+
+- Displays the Min/Max/Avg altitude of the satellite.
+- Displays a status bar for easy monitoring of overall orbital health.
+- Updates in real-time every 10 seconds.
+- Maintains 5 minutes of past data, then removes oldest point of data.
+
+### Installation
+
+Guide users through the installation process step by step.
+
+1. Download the code from repository.
+2. Create a clone in coding environment.
+3. Run npm install for dependancies.
+
+## Usage
+
+There are 2 primary commands to use this application -
+
+1. npm start - boots localhost:3000 to observe application.
+2. npm test - Runs the unit testing code to ensure that health and statistics functions are working properly.
