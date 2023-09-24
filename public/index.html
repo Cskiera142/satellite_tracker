@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Satellite Tracker</title>
+  </head>
+
+  <body>
+    <h1>Satellite Altitude Statistics</h1>
+    <div class="stats">
+      -- <strong>Minimum Altitude:</strong> <span id="minAltitude"></span> km --
+    </div>
+    <div class="stats">
+      -- <strong>Maximum Altitude:</strong> <span id="maxAltitude"></span> km --
+    </div>
+    <div class="stats">
+      -- <strong>Average Altitude:</strong>
+      <span id="averageAltitude"></span> km --
+    </div>
+    <div>
+      -- <strong>STATUS</strong> --
+      <div>
+        <div id="orbit-status"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
