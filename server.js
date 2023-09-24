@@ -2,7 +2,7 @@ const { default: axios } = require("axios");
 const express = require("express");
 const app = express();
 
-const PORT = process.env.PORT || 3000; // Use the value of PORT environment variable or default to port 3000
+const PORT = process.env.PORT || 3000;
 
 const altitudeData = [];
 app.use(express.static("public"));
@@ -73,6 +73,10 @@ app.get("/health", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+if (!module.parent) {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
